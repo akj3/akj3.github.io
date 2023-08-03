@@ -13,7 +13,7 @@
 
 
             <!-- Welcome Section -->
-            <div class="main" style="background-color: #333">
+            <div class="main" style="background-color: #333; min-width: 400px;">
                 
                 
                 <div class="row">
@@ -21,6 +21,12 @@
                     
                     <nav class="navbar">
                         
+                        <style>
+                            .navbar-list li a {
+                              text-shadow: none;
+                            }
+                        </style>
+
 
                         <ul class="navbar-list">
                           <li><a href="#about">About</a></li>
@@ -79,29 +85,41 @@
                     <h1 class="xlarge-font"><u><b style="text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">About me and my Goals:</b></u></h1>
                     <h1 class="large-font" style="color: #C3c3d0;"><b style="text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">Who am I?</b></h1>
 
-                    <p style="line-height: 1.5em;"><span style="font-size:36px; font-family: Arvo">I am a <b style="color: #71252f" >Albanian-American </b>student</span> pursuing my education at the University of Wisconsin-Madison. 
+                    <p style="line-height: 1.5em;"><span style="font-size:36px; font-family: Arvo">I am an <b style="color: #71252f" >Albanian-American </b>student</span> pursuing my education at the University of Wisconsin-Madison. 
                         Currently, I am focusing on my major in Computer Science, complemented by a certificate (minor) in German. 
                         With a strong passion for coding, I thrive as a diligent and fast-paced learner, consistently engaging in diverse 
                         coding projects. As part of my summer endeavors, I am actively involved in developing a Desmos-like 2D equation grapher and 
                         crafting a sophisticated Discord bot. 
-                        My prior experience in the restaurant industry has instilled in me invaluable skills in customer 
+                        My experience in the restaurant industry has instilled in me invaluable skills in customer 
                         service and swift problem-solving. These proficiencies seamlessly translate into my pursuit of a
                         future profession, where I aim to excel with utmost dedication and efficiency.</p>
                     <button class="learn_more" style="background-color: #71252f; color: black;" onclick = "learnmoreClick()">Learn more about Prespa!</button>
-                    <h1 class="large-font" style="color: #C3c3d0;"><b style="text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">Some of my future plans:</b></h1>
-                    <ul style="line-height: 1.5em; font-size:20px; font-family: Arvo">
+                    <h1 class="large-font" style="color: #C3c3d0;"><b style="text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)"><u>Some of my future plans:</u></b></h1>
+                    <ul style="line-height: 1.5em; font-size:20px; font-family: Arvo; color: black">
+
+
+                        <!-- Remove the text-shadow and bold from the bulleted list after "Some of my future plans" -->
+                        <style>
+                            .container#about ul {
+                              list-style-type: disc; /* Set the list style type to disc */
+                              font-weight: normal; /* Remove the bold font weight */
+                              text-shadow: none; /* Remove the text-shadow */
+                            }
+                          </style>
+                          
+
                         <li>Develop connections with students, TAs, and professors within my university</li>
                         <li>To land an internship either within the country or abroad for next summer</li>
-                        <li>Continue to further develop on my Xygos project, and create and expand on new projects</li>
-                        <li>Study abroad in Germany my senior year to learn what its like living there and enrich in German culture</li>
-                        <li>Obtain my EU blue card, to obtain permanent residence in Germany</li>
+                        <li>Continue to further develop my Xygos project and create and expand on new projects</li>
+                        <li>Studying abroad in Germany my senior year to learn what it is like living there and enrich German culture</li>
+                        <li>Obtain my EU blue card to obtain permanent residence in Germany</li>
                       </ul>
 
                 </div>
                 <div class="column-33">
                     <h1 style="text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">I come from the Prespa region in Southwestern North Macedonia near the border of <b style="color: #71252f; text-shadow: 2px 2px 0px rgba(0, 0, 0, 1) ">Albania</b></h1>
                     <img src="images/prespa-map.jpg" alt="Prespa Photo">
-                    <img class="arber" src="images/arber.png" width = "300" height = "400" alt="Arber">
+                    <img class="arber" src="images/ArberLA.png" width = "300" height = "400" alt="Arber">
                 </div>
                 </div>
             </div>
@@ -171,36 +189,98 @@
                     <h2 class="xygos" style="color:black; text-shadow: 2px 2px 0px #963040
                     ">iOS Developer at Xygos:</h1>
     
-                            <ul style="line-height: 1.5em; font-size:20px; color: #C3c3d0;font-family: Arvo; text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">
-                                <li>Collaborated in a startup with <b style="color: black">4</b> collogues to create an iOS app that helps students learn 
-                                    college-level math in a more robust and time-efficient manner, minimizing the use of textbooks
-                                and other online resources</li>
-                                <li>Designed and developed a 2D equation grapher, similar in functionality to Desmos, that
-                                    is displayed to the user's screen with adjustable zoom-in and zoom-out features. This grapher helps work
-                                    with the backend to work with units from Calulus I to be implemented in other parts of the app
-                                </li>
-                                <li>Faciliated other parts of the frontend and backend that works with numerous Calculus rules and parsers to 
-                                    help make the app become more user-friendly
-                                </li>
-                              </ul> 
+    <style>
+        ul {
+          line-height: 1.5em;
+          font-size: 20px;
+          color: #C3c3d0;
+          font-family: Arvo;
+          position: relative;
+        }
+        ul li span {
+          position: relative;
+          z-index: 2;
+        }
+        ul li span::after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          text-shadow: 2px 2px 0px rgba(38, 45, 128, 1);
+        }
+      </style>
+      
+            <ul>
+                <li>
+                Collaborated in a startup with <span><b style="color: black">3</b></span> colleagues to create an iOS app that helps students learn
+                college-level math in a more robust and time-efficient manner, minimizing the use of textbooks
+                and other online resources
+                </li>
+                <li>
+                Designed and developed a 2D equation grapher, similar in functionality to Desmos, that
+                is displayed on the user's screen with adjustable zoom-in and zoom-out features. This grapher helps work
+                with the backend to work with units from Calculus I to be implemented in other parts of the app
+                </li>
+                <li>
+                Analyzed other parts of the frontend and backend that work with numerous Calculus rules and parsers to
+                help make the app more user-friendly
+                </li>
+            </ul>
+      
+      
                     <h2 class="flight" style="color:black; text-shadow: 2px 2px 0px #963040
                     "><b>Flight Generator:</b></h2>
-                        <ul style="line-height: 1.5em; font-size:20px; color: #C3c3d0;font-family: Arvo; text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">
-                            <li>Collaborated in a group of <b style="color: black">6</b> to read a DOT file list of <b style="color: black">3.5 million</b> domestic flights in US airports and finding 
-                                distances between them </li>
-                            <li>Using Dijkstra's algorithm, the user was assisted in finding the shortest airport path, given their starting
-                                and ending destination node, and found the shortest distance between the two nodes using the algorithm </li>
-                            <li> Developed the frontend of the app that read in the <b style="color: black">3.5 million</b> flights and original airports to be divided into <b style="color: black">4</b> subcategories to display 
+                        <style>
+                            ul {
+                              line-height: 1.5em;
+                              font-size: 20px;
+                              color: #C3c3d0;
+                              font-family: Arvo;
+                              text-shadow: 2px 2px 0px rgba(38, 45, 128, 1);
+                            }
+                          
+                            ul li {
+                              position: relative;
+                            }
+                          
+                            ul li b {
+                              color: black;
+                              text-shadow: none;
+                            }
+                          
+                            ul li::before {
+                              content: "";
+                              position: absolute;
+                              top: 2px;
+                              left: 2px;
+                              right: 0;
+                              bottom: 0;
+                              z-index: -1;
+                              text-shadow: 2px 2px 0px rgba(38, 45, 128, 1);
+                            }
+                          </style>
+                          
+                            <ul>
+                                <li>Collaborated in a group of <b>6</b> to read a DOT file list of <b>3.5 million</b> domestic flights in US airports and find 
+                                distances between them 
+                                </li>
+                                <li>Using Dijkstra's algorithm, the user was assisted in finding the shortest airport path, given their starting
+                                and ending destination node, and found the shortest distance between the two nodes using the algorithm 
+                                </li>
+                                <li> Developed the frontend of the app that read in the <b>3.5 million</b> flights and original airports to be divided into <b>4</b> subcategories to display 
                                 on the screen
-                            </li>
-                            <li>
-                                 Administered incoming lists of domestic US airports from a DOT file which got passed to the backend   
-                            </li>
-                            <li>
-                                Maintained all java files through Git using the bash terminal within a shared repository
-                            </li>
-
-                        </ul> 
+                                </li>
+                                <li>
+                                Administered incoming lists of domestic US airports from a DOT file which got passed to the backend   
+                                </li>
+                                <li>
+                                Maintained all Java files through Git using the bash terminal within a shared repository
+                                </li>
+                            </ul>
+                          
 
 
                     <h2 class="discord" style="color:black; text-shadow: 2px 2px 0px #963040
@@ -212,13 +292,43 @@
                     <h2 class="website" style="color:black; text-shadow: 2px 2px 0px #963040
                     "><b>Personal Website:</b></h2>
 
-                        <ul style="line-height: 1.5em; font-size:20px; color: #C3c3d0;font-family: Arvo; text-shadow: 2px 2px 0px rgba(38, 45, 128, 1)">
-                            <li> Developed personal website using HTML/CSS, JavaScript, and Bootstrap to be used as a ePortfolio</li>
-                            <li>Hosted on the cloud <b style="color: black">24/7</b> and continously updated via GitHub</li>
-                            <li> Complies with W3C standards 
-                            </li>
-                        </ul> 
-
+<style>
+    ul {
+      line-height: 1.5em;
+      font-size: 20px;
+      color: #C3c3d0;
+      font-family: Arvo;
+      text-shadow: 2px 2px 0px rgba(38, 45, 128, 1);
+    }
+  
+    ul li {
+      position: relative;
+    }
+  
+    ul li b {
+      color: black;
+      text-shadow: none;
+    }
+  
+    ul li::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      text-shadow: 2px 2px 0px rgba(38, 45, 128, 1);
+    }
+  </style>
+  
+        <ul>
+            <li> Developed personal website using HTML/CSS, JavaScript, and Bootstrap to be used as an ePortfolio</li>
+            <li>Hosted on the cloud <b>24/7</b> and continuously updated via GitHub</li>
+            <li> Complies with W3C standards 
+            </li>
+        </ul>
+        
 
 
                    
@@ -285,19 +395,20 @@
                 </div>
             </div>
 
-            <footer class = "footer">
+            <footer class="footer">
                 <center>
-                    <div class= "text-center" style = "padding-top: 2.5em">
-                        © 2023 Arber Jonuzi - All Rights Reserved
-                    </div>
-                </center>
-                <a href="#about">
+                  <div class="text-center" style="padding-top: 2.5em">
+                    © 2023 Arber Jonuzi - All Rights Reserved
+                  </div>
+                  <a href="#about">
                     <button class="glow-on-hover" type="button">Back to top</button>
+                  </a>
+                </center>
+              </footer>
 
-                </a>
-                
-
-            </footer>
+              
+              
+              
 
 
         <link rel="stylesheet" href="styles.css">
